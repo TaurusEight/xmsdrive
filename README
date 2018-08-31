@@ -1,0 +1,42 @@
+
+xmsdrive.sys
+============
+
+
+Author
+------
+
+  Daniel Mendyke [archadious@gmail.com]
+
+
+README
+------
+
+  An Extended Memory (XMS) RAM drive developed for use with MS-DOS and
+  FreeDOS.  The drive parameters allow use of either 16 or 12 bit FAT
+  tables with sectors of either 128, 256 or 512 bytes.
+
+
+Tools
+-------
+
+  ‘Xmsdrive’ was written using WASM, a freeware assembler written by
+  Eric Tauck.  It can found at:
+
+    ftp://ftp.sac.sk/sac/utilprog/wasm223.zip
+    ftp://ftp.elf.stuba.sk/pub/pc/utilprog/wasm223.zip
+
+
+Use
+-----
+
+  Add a DEVICE line to the system’s ‘config.sys’ file.
+
+  There are three parameters, the first is the size of the drive in
+  K-bytes, the second parameter is the size of the drive sectors and
+  the third parameters is the number of entries in the root directory.
+  The last parameter is optional.
+
+  For example:
+
+    DEVICE=C:\xmsdrive.sys 64 128
